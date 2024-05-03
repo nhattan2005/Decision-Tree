@@ -27,7 +27,7 @@ def splitdataset(balance_data):
     # Biến Y chứa biến mục tiêu
     Y = balance_data.values[:, 0]
 
-    # Chia bộ dữ liệu thành training và testing dataset
+    # Chia bộ dữ liệu thành training và testing dataset với tỉ lệ 70:30 (70% cho training, 30% cho test)
     X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.3, random_state=100)
 
     return X, Y, X_train, X_test, y_train, y_test
